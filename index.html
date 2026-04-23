@@ -10,21 +10,24 @@
             color: #e0e0e0;
             font-family: Arial, sans-serif;
             text-align: center;
-            animation: fadeIn 1s;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
         h1 {
             font-size: 48px;
             margin-top: 20%;
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+        h1.visible {
+            opacity: 1;
         }
     </style>
 </head>
 <body>
-    <h1>Coming Soon</h1>
+    <h1 id="headline">Coming Soon</h1>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('headline').classList.add('visible');
+        });
+    </script>
 </body>
 </html>
