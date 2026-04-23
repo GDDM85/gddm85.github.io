@@ -16,17 +16,51 @@
             margin-top: 20%;
             opacity: 0;
             transition: opacity 3s ease-in;
+            -webkit-transition: opacity 3s ease-in; /* Safari/iOS fallback */
+            will-change: opacity;
         }
         h1.visible {
             opacity: 1;
+        }
+
+        /* Respect users who prefer reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            h1 {
+                transition: none !important;
+            }
         }
     </style>
 </head>
 <body>
     <h1 id="headline">Coming Soon</h1>
     <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('headline').classList.add('visible');
+        document.addEventListener('DOMContentLoaded', function() {
+            const el = document.getElementById('headline');
+
+            // If the user prefers reduced motion, just show immediately
+            if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                el.style.opacity = '1';
+                return;
+            }
+
+            // Ensure the initial style is painted before adding the class so the transition runs.
+            // Using double requestAnimationFrame is a robust, widely-used pattern.
+            if (window.requestAnimationFrame) {
+                requestAnimationFrame(function() {
+                    requestAnimationFrame(function() {
+                        el.classList.add('visible');
+                    });
+                });
+                // fallback in case RAF is not sufficient on some devices
+                setTimeout(function() {
+                    if (!el.classList.contains('visible')) el.classList.add('visible');
+                }, 50);
+            } else {
+                // Older fallback
+                setTimeout(function() {
+                    el.classList.add('visible');
+                }, 50);
+            }
         });
     </script>
 </body>
