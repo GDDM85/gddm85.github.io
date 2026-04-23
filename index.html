@@ -23,9 +23,21 @@
             opacity: 1;
         }
 
+        h2 {
+            font-size: 20px;
+            margin-top: 1rem;
+            opacity: 0;
+            transition: opacity 2s ease-in;
+            -webkit-transition: opacity 2s ease-in;
+            will-change: opacity;
+        }
+        h2.visible {
+            opacity: 1;
+        }
+
         /* Respect users who prefer reduced motion */
         @media (prefers-reduced-motion: reduce) {
-            h1 {
+            h1, h2 {
                 transition: none !important;
             }
         }
@@ -33,32 +45,65 @@
 </head>
 <body>
     <h1 id="headline">Coming Soon</h1>
+    <h2 id="subhead">A site of Daniel McDermott — Lead Developer</h2>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const el = document.getElementById('headline');
+            const h1 = document.getElementById('headline');
+            const h2 = document.getElementById('subhead');
 
-            // If the user prefers reduced motion, just show immediately
+            // Respect reduced motion: show both immediately
             if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                el.style.opacity = '1';
+                h1.style.opacity = '1';
+                h2.style.opacity = '1';
                 return;
             }
+
+            // Function that triggers the h2 reveal
+            function revealH2() {
+                if (!h2.classList.contains('visible')) {
+                    h2.classList.add('visible');
+                }
+            }
+
+            // Listen for h1 transition end (once) and then reveal h2.
+            // Use a fallback timeout slightly longer than the h1 transition duration in case transitionend doesn't fire.
+            const H1_TRANSITION_MS = 3000; // must match the CSS duration for h1
+            let transitionHandled = false;
+
+            function onH1TransitionEnd(e) {
+                // Only respond to opacity transition events
+                if (e && e.propertyName && e.propertyName !== 'opacity') return;
+                if (transitionHandled) return;
+                transitionHandled = true;
+                revealH2();
+            }
+
+            h1.addEventListener('transitionend', onH1TransitionEnd, { once: true });
+
+            // Fallback: ensure h2 shows even if transitionend doesn't fire
+            setTimeout(function() {
+                if (!transitionHandled) {
+                    transitionHandled = true;
+                    revealH2();
+                }
+            }, H1_TRANSITION_MS + 200);
 
             // Ensure the initial style is painted before adding the class so the transition runs.
             // Using double requestAnimationFrame is a robust, widely-used pattern.
             if (window.requestAnimationFrame) {
                 requestAnimationFrame(function() {
                     requestAnimationFrame(function() {
-                        el.classList.add('visible');
+                        h1.classList.add('visible');
                     });
                 });
                 // fallback in case RAF is not sufficient on some devices
                 setTimeout(function() {
-                    if (!el.classList.contains('visible')) el.classList.add('visible');
+                    if (!h1.classList.contains('visible')) h1.classList.add('visible');
                 }, 50);
             } else {
                 // Older fallback
                 setTimeout(function() {
-                    el.classList.add('visible');
+                    h1.classList.add('visible');
                 }, 50);
             }
         });
