@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const meta = {
+  title: 'Daniel McDermott — Lead Developer',
+  description: 'Profile and career hub for Daniel McDermott, building scalable, real-world systems.',
+};
+---
+<BaseLayout title={meta.title} description={meta.description}>
+  <section class="intro">
+    <p class="tag">Lead Developer</p>
+    <h1>Daniel McDermott</h1>
+    <p>
+      Building scalable, real-world systems for teams that need clarity, speed, and long-term stability.
+      This site is a career and profile hub with projects, services, and contact details.
+    </p>
+  </section>
+
+  <section class="section card">
+    <h2>Work Focus</h2>
+    <div class="grid grid-2">
+      <div>
+        <h3>Technical Leadership</h3>
+        <p>
+          Coaching teams, architecting systems, and improving delivery through modern tooling and strong engineering practices.
+        </p>
+      </div>
+      <div>
+        <h3>Product Delivery</h3>
+        <p>
+          Shipping well-crafted digital products with a focus on reliability, performance, and user experience.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section card">
+    <h2>Featured Highlights</h2>
+    <ul>
+      <li>Career portfolio for software engineering, consulting, and leadership roles</li>
+      <li>Personal brand and messaging for a developer-focused audience</li>
+      <li>Simple, maintainable architecture for GitHub Pages deployment</li>
+    </ul>
+  </section>
+
+  <section class="section card">
+    <h2>Next Steps</h2>
+    <div class="grid grid-2">
+      <div>
+        <h3>Projects</h3>
+        <p>Start adding case studies, product work, open-source contributions, and selected client engagements.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>
+          Update this section with email, LinkedIn, Twitter, or other professional contact channels.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

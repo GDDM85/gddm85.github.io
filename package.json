@@ -1,0 +1,15 @@
+{
+  "name": "danielmcdermott-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "astro": "^4.9.0",
+    "prettier": "^3.8.3"
+  }
+}
