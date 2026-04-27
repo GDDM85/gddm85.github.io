@@ -1,60 +1,77 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import Container from '../components/Container.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+import Footer from '../components/Footer.astro';
+import { whatIDoItems, featuredWork, thoughts, techStack } from '../data/siteData';
 const meta = {
   title: 'Daniel McDermott — Lead Developer',
-  description: 'Profile and career hub for Daniel McDermott, building scalable, real-world systems.',
+  description: 'Modern dark-theme profile for Daniel McDermott, building scalable software in health-tech.',
 };
 ---
 <BaseLayout title={meta.title} description={meta.description}>
-  <section class="intro">
-    <p class="tag">Lead Developer</p>
-    <h1>Daniel McDermott</h1>
-    <p>
-      Building scalable, real-world systems for teams that need clarity, speed, and long-term stability.
-      This site is a career and profile hub with projects, services, and contact details.
-    </p>
-  </section>
+  <Header />
+  <Hero />
 
-  <section class="section card">
-    <h2>Work Focus</h2>
-    <div class="grid grid-2">
-      <div>
-        <h3>Technical Leadership</h3>
-        <p>
-          Coaching teams, architecting systems, and improving delivery through modern tooling and strong engineering practices.
+  <Section id="what-i-do" eyebrow="What I Do" title="Turning complexity into reliable solutions.">
+    <Container className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-start">
+      <div class="rounded-[2rem] border border-white/10 bg-slate-900/80 p-10 shadow-soft shadow-slate-950/40">
+        <p class="text-slate-300 leading-8">
+          With a background spanning infrastructure to full-stack development, I combine deep technical knowledge with a pragmatic approach to deliver software that makes a real difference.
         </p>
+        <Button href="#about" variant="secondary" className="mt-8">More about my journey →</Button>
       </div>
-      <div>
-        <h3>Product Delivery</h3>
-        <p>
-          Shipping well-crafted digital products with a focus on reliability, performance, and user experience.
-        </p>
+      <div class="grid gap-4 sm:grid-cols-2">
+        {whatIDoItems.map((item) => (
+          <Card icon={item.icon} title={item.title} description={item.description} />
+        ))}
       </div>
-    </div>
-  </section>
+    </Container>
+  </Section>
 
-  <section class="section card">
-    <h2>Featured Highlights</h2>
-    <ul>
-      <li>Career portfolio for software engineering, consulting, and leadership roles</li>
-      <li>Personal brand and messaging for a developer-focused audience</li>
-      <li>Simple, maintainable architecture for GitHub Pages deployment</li>
-    </ul>
-  </section>
+  <Section id="featured-work" eyebrow="Featured Work" title="Solving meaningful problems at scale">
+    <Container className="space-y-8">
+      <div className="grid gap-6 lg:grid-cols-3">
+        {featuredWork.map((item) => (
+          <Card label={item.label} title={item.title} description={item.description} href={item.href} linkLabel="View case study →" />
+        ))}
+      </div>
+      <div className="flex justify-center">
+        <Button href="#work" variant="secondary">View all projects</Button>
+      </div>
+    </Container>
+  </Section>
 
-  <section class="section card">
-    <h2>Next Steps</h2>
-    <div class="grid grid-2">
-      <div>
-        <h3>Projects</h3>
-        <p>Start adding case studies, product work, open-source contributions, and selected client engagements.</p>
-      </div>
-      <div>
-        <h3>Contact</h3>
-        <p>
-          Update this section with email, LinkedIn, Twitter, or other professional contact channels.
+  <Section id="thoughts" eyebrow="Thoughts" title="Sharing ideas and lessons learned.">
+    <Container className="space-y-8">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <p className="max-w-2xl text-slate-400">
+          Articles on engineering, leadership and building software that matters.
         </p>
+        <Button href="#thoughts" variant="secondary">Read all articles →</Button>
       </div>
-    </div>
-  </section>
+      <div className="grid gap-6 lg:grid-cols-3">
+        {thoughts.map((item) => (
+          <Card label={item.date} title={item.title} description={item.summary} href={item.href} linkLabel="Read article →" />
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <Section id="tech-stack" eyebrow="Tech Stack" title="Technologies and platforms I work with">
+    <Container className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-10">
+      {techStack.map((tech) => (
+        <div class="rounded-[1.75rem] border border-white/10 bg-slate-900/80 p-6 text-slate-200 shadow-soft">
+          <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-200 text-lg">{tech.icon}</div>
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">{tech.name}</p>
+        </div>
+      ))}
+    </Container>
+  </Section>
+
+  <Footer />
 </BaseLayout>

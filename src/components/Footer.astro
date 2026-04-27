@@ -1,0 +1,36 @@
+---
+import { navItems, socialLinks, footerQuote } from '../data/siteData';
+---
+<footer class="border-t border-white/10 bg-slate-950/90 py-12 text-slate-300">
+  <div class="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[1.2fr_1fr_1fr] lg:items-start">
+    <div class="space-y-4">
+      <div class="inline-flex items-center gap-3 text-white">
+        <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-200">DM</span>
+        <span class="text-sm font-semibold uppercase tracking-[0.35em]">Daniel McDermott</span>
+      </div>
+      <p class="max-w-md text-slate-400">{footerQuote}</p>
+      <p class="text-sm text-slate-500">© {new Date().getFullYear()} Daniel McDermott. All rights reserved.</p>
+    </div>
+
+    <div class="space-y-4">
+      <p class="text-sm uppercase tracking-[0.35em] text-cyan-200/80">Explore</p>
+      <div class="grid gap-3 text-sm text-slate-300">
+        {navItems.map((item) => (
+          <a href={`#${item.toLowerCase().replace(' ', '-')}`} class="hover:text-cyan-100">{item}</a>
+        ))}
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <p class="text-sm uppercase tracking-[0.35em] text-cyan-200/80">Connect</p>
+      <div class="grid gap-3 text-sm">
+        {socialLinks.map((link) => (
+          <a href={link.href} class="inline-flex items-center gap-2 text-slate-300 hover:text-cyan-100" target="_blank" rel="noreferrer">
+            <span>{link.icon}</span>
+            {link.label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</footer>
