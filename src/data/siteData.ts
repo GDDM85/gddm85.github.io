@@ -17,7 +17,7 @@ export const whatIDoItems = [
     description: 'Guiding teams and stakeholders through complex delivery decisions with clarity.',
   },
   {
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5-1.5-2-4-2-4s2.5-.5 3.5.5"></path><path d="M19.5 4.5c1.5 1.5 2 4 2 4s-2.5.5-3.5-.5"></path><path d="M7.5 3.5l9 9"></path><path d="M12 2v7"></path><path d="M12 15v7"></path><circle cx="12" cy="12" r="1"></circle></svg>',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L14.5 9H9.5L12 2Z"></path><path d="M12 9V20"></path><path d="M9 17L7 22"></path><path d="M15 17L17 22"></path></svg>',
     title: 'Delivery Focused',
     description: 'Keeping teams aligned on outcomes and shipping dependable work on time.',
   },
