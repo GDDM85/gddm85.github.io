@@ -25,9 +25,9 @@ export const whatIDoItems = [
 
 export const featuredWork = [
   {
-    label: 'Health-tech',
-    title: 'Care Planning System',
-    description: 'Designing a robust care planning platform that supports clinicians and care teams with reliable workflows.',
+    label: 'Engineering',
+    title: 'Platform Architecture',
+    description: 'Designing robust platforms that support complex workflows and reliable operations.',
     href: '#',
   },
   {
@@ -48,7 +48,7 @@ export const thoughts = [
   {
     date: 'Apr 2026',
     title: 'Designing systems for long-term trust',
-    summary: 'How to make architecture decisions that reduce risk and improve confidence for health-tech teams.',
+    summary: 'How to make architecture decisions that reduce risk and improve confidence for engineering teams.',
     href: '#',
   },
   {
