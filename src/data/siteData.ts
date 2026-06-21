@@ -1,3 +1,5 @@
+import rocketLaunchSvg from '../images/rocket-launch.svg?raw';
+
 export const navItems = ['Home', 'About', 'Work', 'Thoughts', 'Tech Stack', 'Contact'];
 
 export const whatIDoItems = [
@@ -17,7 +19,7 @@ export const whatIDoItems = [
     description: 'Guiding teams and stakeholders through complex delivery decisions with clarity.',
   },
   {
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L14.5 9H9.5L12 2Z"></path><path d="M12 9V20"></path><path d="M9 17L7 22"></path><path d="M15 17L17 22"></path></svg>',
+    icon: rocketLaunchSvg,
     title: 'Delivery Focused',
     description: 'Keeping teams aligned on outcomes and shipping dependable work on time.',
   },
