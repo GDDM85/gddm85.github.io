@@ -26,9 +26,8 @@ jobs:
           touch dist/.nojekyll
       - uses: actions/configure-pages@v4
       - name: Upload pages artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: pages
           path: ./dist
 
   deploy:
@@ -36,14 +35,5 @@ jobs:
     runs-on: ubuntu-latest
     environment: github-pages
     steps:
-      - name: Download pages artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: pages
-          path: pages
-
-      - name: Move artifact contents into workspace
-        run: |
-          bash -lc 'shopt -s dotglob && cp -r pages/* . && rm -rf pages'
-
+      - uses: actions/download-pages-artifact@v3
       - uses: actions/deploy-pages@v2
