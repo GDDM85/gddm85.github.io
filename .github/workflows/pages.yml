@@ -19,6 +19,11 @@ jobs:
           node-version: '20'
       - run: npm ci
       - run: npm run build
+      - name: Disable Jekyll on published site
+        run: |
+          # Ensure GitHub Pages won't try to run Jekyll on the published artifact
+          mkdir -p dist
+          touch dist/.nojekyll
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v1
         with:
