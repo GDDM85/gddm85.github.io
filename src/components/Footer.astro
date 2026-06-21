@@ -26,7 +26,7 @@ import { navItems, socialLinks, footerQuote } from '../data/siteData';
       <div class="grid gap-3 text-sm">
         {socialLinks.map((link) => (
           <a href={link.href} class="inline-flex items-center gap-2 text-slate-300 hover:text-cyan-100" target="_blank" rel="noreferrer">
-            <span>{link.icon}</span>
+            <span class="inline-flex h-5 w-5 items-center justify-center" innerHTML={link.icon}></span>
             {link.label}
           </a>
         ))}
