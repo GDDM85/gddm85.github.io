@@ -1,0 +1,63 @@
+---
+import Button from './Button.astro';
+const metadata = [
+  { icon: '📍', label: 'UK Based' },
+  { icon: '👥', label: 'Leader & Mentor' },
+  { icon: '</>', label: 'Full-Stack Engineer' },
+];
+---
+<section id="home" class="relative overflow-hidden pb-20 pt-10 sm:pt-14">
+  <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(0,188,212,0.16),_transparent_25%)]" />
+  <div class="relative mx-auto max-w-7xl px-6">
+    <div class="grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:items-center">
+      <div class="space-y-8">
+        <div class="inline-flex items-center gap-3 rounded-full border border-cyan-400/15 bg-slate-900/70 px-4 py-2 text-sm text-cyan-200">
+          <span class="h-2.5 w-2.5 rounded-full bg-cyan-400" />
+          Leading health-tech systems with clarity and resilience
+        </div>
+
+        <div class="space-y-4">
+          <p class="text-sm uppercase tracking-[0.35em] text-cyan-200/80">Hi, I'm</p>
+          <h1 class="text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">Daniel McDermott</h1>
+          <p class="text-xl font-semibold text-cyan-300">Lead Developer. Systems Thinker. Problem Solver.</p>
+          <p class="max-w-2xl text-slate-300 leading-8">
+            I build and lead scalable software solutions in health-tech, delivering real impact for thousands of users every day.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-4">
+          <Button href="#work">View My Work</Button>
+          <Button href="#about" variant="secondary">About Me</Button>
+        </div>
+
+        <div class="grid gap-3 sm:grid-cols-3">
+          {metadata.map((item) => (
+            <div class="rounded-3xl border border-white/10 bg-slate-900/75 px-4 py-4 text-sm text-slate-200 shadow-soft">
+              <div class="inline-flex items-center gap-2 text-cyan-300">
+                <span>{item.icon}</span>
+                <span>{item.label}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="relative mx-auto w-full max-w-md">
+        <div class="absolute -left-10 top-0 h-44 w-44 rounded-full bg-cyan-500/10 blur-3xl" />
+        <div class="relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-slate-950/90 p-4 shadow-[0_40px_120px_rgba(0,0,0,0.35)]">
+          <div class="relative h-[520px] overflow-hidden rounded-[1.75rem] bg-[linear-gradient(180deg,#08111f_0%,#020617_58%,#020617_100%)]">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(0,188,212,0.14),_transparent_28%)]" />
+            <div class="absolute inset-x-0 bottom-0 h-64 rounded-[1.75rem] bg-gradient-to-t from-slate-950/95 via-slate-950/50 to-transparent" />
+            <div class="absolute inset-x-0 top-0 h-full">
+              <div class="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-l from-slate-950/0 to-slate-950/90" />
+              <div class="absolute inset-x-0 top-16 flex justify-center">
+                <div class="h-72 w-72 rounded-full bg-slate-900/80 shadow-[0_0_120px_rgba(0,188,212,0.12)]" />
+              </div>
+              <div class="absolute bottom-14 left-1/2 -translate-x-1/2 h-40 w-40 rounded-full bg-cyan-500/10 ring-1 ring-cyan-400/20" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
