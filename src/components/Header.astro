@@ -23,7 +23,7 @@ const githubLink = socialLinks.find((link) => link.label === 'GitHub');
         class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-slate-950/80 text-slate-100 hover:border-cyan-400/20 hover:text-cyan-100"
         aria-label="GitHub"
       >
-        {githubLink.icon}
+        <span class="inline-flex h-5 w-5 items-center justify-center flex-none" set:html={githubLink.icon}></span>
       </a>
     )}
   </div>
