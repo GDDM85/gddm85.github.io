@@ -1,9 +1,11 @@
 ---
 import Button from './Button.astro';
+import { MapPinIcon, UserGroupIcon, CodeBracketSquareIcon } from 'heroicons/outline';
+
 const metadata = [
-  { icon: '📍', label: 'UK Based' },
-  { icon: '👥', label: 'Leader & Mentor' },
-  { icon: '</>', label: 'Full-Stack Engineer' },
+  { icon: MapPinIcon, label: 'UK Based' },
+  { icon: UserGroupIcon, label: 'Leader & Mentor' },
+  { icon: CodeBracketSquareIcon, label: 'Full-Stack Engineer' },
 ];
 ---
 <section id="home" class="relative overflow-hidden pb-20 pt-10 sm:pt-14">
@@ -28,7 +30,7 @@ const metadata = [
         <div class="grid gap-3 sm:grid-cols-3">
           {metadata.map((item) => (
             <div class="inline-flex items-center gap-2 rounded-none bg-slate-800/20 px-4 py-3 text-sm text-cyan-300">
-              <span>{item.icon}</span>
+              <item.icon class="h-5 w-5" />
               <span>{item.label}</span>
             </div>
           ))}
