@@ -1,5 +1,6 @@
 ---
 import Button from './Button.astro';
+import profilePhoto from '../images/20231017_135440-removebg-preview.png';
 
 const metadata = [
   { 
@@ -45,20 +46,16 @@ const metadata = [
         </div>
       </div>
 
-      <div class="relative mx-auto w-full max-w-md">
+      <div class="relative mx-auto w-full max-w-md flex items-end justify-center">
         <div class="absolute -left-10 top-0 h-44 w-44 rounded-full bg-cyan-500/10 blur-3xl" />
-        <div class="relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-slate-950/90 p-4 shadow-[0_40px_120px_rgba(0,0,0,0.35)]">
-          <div class="relative h-[520px] overflow-hidden rounded-[1.75rem] bg-[linear-gradient(180deg,#08111f_0%,#020617_58%,#020617_100%)]">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(0,188,212,0.14),_transparent_28%)]" />
-            <div class="absolute inset-x-0 bottom-0 h-64 rounded-[1.75rem] bg-gradient-to-t from-slate-950/95 via-slate-950/50 to-transparent" />
-            <div class="absolute inset-x-0 top-0 h-full">
-              <div class="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-l from-slate-950/0 to-slate-950/90" />
-              <div class="absolute inset-x-0 top-16 flex justify-center">
-                <div class="h-72 w-72 rounded-full bg-slate-900/80 shadow-[0_0_120px_rgba(0,188,212,0.12)]" />
-              </div>
-              <div class="absolute bottom-14 left-1/2 -translate-x-1/2 h-40 w-40 rounded-full bg-cyan-500/10 ring-1 ring-cyan-400/20" />
-            </div>
-          </div>
+        <div class="relative">
+          <img
+            src={profilePhoto.src}
+            alt="Daniel McDermott"
+            class="relative z-10 w-full max-w-sm object-contain"
+            style="filter: grayscale(100%) contrast(1.1) brightness(0.8); mask-image: linear-gradient(to bottom, black 55%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);"
+          />
+          <div class="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-slate-950/80 z-20 pointer-events-none" />
         </div>
       </div>
     </div>
