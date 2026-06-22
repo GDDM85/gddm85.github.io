@@ -75,14 +75,17 @@ const meta = {
     </Container>
   </Section>
 
-  <Section id="tech-stack" eyebrow="Tech Stack">
-    <Container className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-10">
-      {techStack.map((tech) => (
-        <div class="rounded-[1.75rem] border border-white/10 bg-slate-900/80 p-6 text-slate-200 shadow-soft">
-          <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-200 text-lg">{tech.icon}</div>
-          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">{tech.name}</p>
-        </div>
-      ))}
+  <Section id="tech-stack">
+    <Container className="space-y-6">
+      <p class="text-sm uppercase tracking-[0.35em] text-cyan-200/80">Tech Stack</p>
+      <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-10">
+        {techStack.map((tech) => (
+          <div class="rounded-[1.75rem] border border-white/10 bg-slate-900/80 p-6 text-slate-200 shadow-soft">
+            <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-200 text-lg">{tech.icon}</div>
+            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">{tech.name}</p>
+          </div>
+        ))}
+      </div>
     </Container>
   </Section>
 
