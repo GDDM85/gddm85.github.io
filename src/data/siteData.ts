@@ -12,6 +12,7 @@ import typescriptIcon from '../images/TypeScript.svg?raw';
 import javascriptIcon from '../images/JavaScript.svg?raw';
 import html5Icon from '../images/HTML5.svg?raw';
 import css3Icon from '../images/CSS3.svg?raw';
+import powershellIcon from '../images/Powershell.svg?raw';
 
 export const navItems = ['Home', 'About', 'Work', 'Thoughts', 'Tech Stack', 'Contact'];
 
@@ -93,6 +94,7 @@ export const techStack = [
   { icon: javascriptIcon, name: 'JavaScript' },
   { icon: html5Icon, name: 'HTML5' },
   { icon: css3Icon, name: 'CSS3' },
+  { icon: powershellIcon, name: 'PowerShell' },
 ];
 
 export const socialLinks = [

@@ -78,9 +78,9 @@ const meta = {
   <Section id="tech-stack">
     <Container className="space-y-6">
       <p class="text-sm uppercase tracking-[0.35em] text-cyan-200/80">Tech Stack</p>
-      <div class="flex flex-wrap gap-6 items-center">
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(3.5rem,1fr))] gap-4 items-center">
         {techStack.map((tech) => (
-          <div class="h-10 w-10 text-slate-300 hover:text-cyan-300 transition-colors" title={tech.name} set:html={tech.icon}></div>
+          <div class="h-12 w-12 mx-auto text-slate-300 hover:text-cyan-300 transition-colors" title={tech.name} set:html={tech.icon}></div>
         ))}
       </div>
     </Container>
