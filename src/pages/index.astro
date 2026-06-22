@@ -18,8 +18,8 @@ const meta = {
   <Hero />
 
   <Section id="what-i-do">
-    <Container className="flex gap-6">
-      <div class="flex-shrink-0 w-1/3 rounded-none bg-slate-800/30 p-8 flex flex-col">
+    <Container className="flex flex-col gap-6 lg:flex-row">
+      <div class="lg:flex-shrink-0 lg:w-1/3 rounded-none bg-slate-800/30 p-8 flex flex-col">
         <p class="text-sm uppercase tracking-[0.35em] text-cyan-200/80 mb-2">What I Do</p>
         <h2 class="text-2xl font-semibold text-white mb-4">Turning complexity into reliable solutions.</h2>
         <p class="text-slate-300 leading-8 flex-1">
@@ -27,9 +27,9 @@ const meta = {
         </p>
         <Button href="#about" variant="secondary" className="mt-6">More about my journey →</Button>
       </div>
-      <div class="flex flex-1 gap-4">
+      <div class="grid grid-cols-2 gap-4 lg:flex lg:flex-1">
         {whatIDoItems.map((item) => (
-          <div class="flex-1 rounded-none bg-slate-800/30 p-6 flex flex-col">
+          <div class="rounded-none bg-slate-800/30 p-6 flex flex-col">
             <div class="h-8 w-8 mb-3 text-cyan-300" set:html={item.icon}></div>
             <h3 class="text-lg font-semibold text-white mb-2">{item.title}</h3>
             <p class="text-sm text-slate-300 leading-6">{item.description}</p>
@@ -40,8 +40,8 @@ const meta = {
   </Section>
 
   <Section id="featured-work">
-    <Container className="flex gap-6">
-      <div class="flex-shrink-0 w-1/3 rounded-none bg-slate-800/30 p-8 flex flex-col">
+    <Container className="flex flex-col gap-6 lg:flex-row">
+      <div class="lg:flex-shrink-0 lg:w-1/3 rounded-none bg-slate-800/30 p-8 flex flex-col">
         <p class="text-sm uppercase tracking-[0.35em] text-cyan-200/80 mb-2">Featured Work</p>
         <h2 class="text-2xl font-semibold text-white mb-4">Solving meaningful problems at scale.</h2>
         <p class="text-slate-300 leading-8 flex-1">
@@ -58,8 +58,8 @@ const meta = {
   </Section>
 
   <Section id="thoughts">
-    <Container className="flex gap-6">
-      <div class="flex-shrink-0 w-1/3 rounded-none bg-slate-800/30 p-8 flex flex-col">
+    <Container className="flex flex-col gap-6 lg:flex-row">
+      <div class="lg:flex-shrink-0 lg:w-1/3 rounded-none bg-slate-800/30 p-8 flex flex-col">
         <p class="text-sm uppercase tracking-[0.35em] text-cyan-200/80 mb-2">Thoughts</p>
         <h2 class="text-2xl font-semibold text-white mb-4">Sharing ideas and lessons learned.</h2>
         <p class="text-slate-300 leading-8 flex-1">
