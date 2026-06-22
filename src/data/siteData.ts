@@ -105,4 +105,4 @@ export const socialLinks = [
   { label: 'Email', href: 'mailto:hello@danielmcdermott.co.uk', icon: '✉️' },
 ];
 
-export const footerQuote = 'Code should feel effortless for users and manageable for teams.';
+export const footerQuote = 'Everything should be made as simple as possible — but not simpler.';

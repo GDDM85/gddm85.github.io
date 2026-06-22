@@ -1,11 +1,12 @@
 ---
 import { navItems, socialLinks, footerQuote } from '../data/siteData';
+import dmIcon from '../images/dm-icon.png';
 ---
 <footer class="border-t border-white/10 bg-slate-950/90 py-12 text-slate-300">
   <div class="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[1.2fr_1fr_1fr] lg:items-start">
     <div class="space-y-4">
       <div class="inline-flex items-center gap-3 text-white">
-        <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-200">DM</span>
+        <img src={dmIcon.src} alt="DM" class="h-11 w-11 rounded-2xl" />
         <span class="text-sm font-semibold uppercase tracking-[0.35em]">Daniel McDermott</span>
       </div>
       <p class="max-w-md text-slate-400">{footerQuote}</p>
