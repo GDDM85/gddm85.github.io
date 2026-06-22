@@ -80,9 +80,7 @@ const meta = {
       <p class="text-sm uppercase tracking-[0.35em] text-cyan-200/80">Tech Stack</p>
       <div class="flex flex-wrap gap-6 items-center">
         {techStack.map((tech) => (
-          <div class="text-slate-300 text-4xl" title={tech.name}>
-            {tech.icon}
-          </div>
+          <div class="h-10 w-10 text-slate-300 hover:text-cyan-300 transition-colors" title={tech.name} set:html={tech.icon}></div>
         ))}
       </div>
     </Container>

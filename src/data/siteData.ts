@@ -1,5 +1,17 @@
 import rocketLaunchSvg from '../images/rocket-launch.svg?raw';
 import codeBracketSvg from '../images/code-bracket.svg?raw';
+import dotnetIcon from '../images/NET.svg?raw';
+import reactIcon from '../images/React.svg?raw';
+import flutterIcon from '../images/Flutter.svg?raw';
+import sqlserverIcon from '../images/SQL-Developer.svg?raw';
+import azureIcon from '../images/Azure.svg?raw';
+import azureDevOpsIcon from '../images/Azure-Devops.svg?raw';
+import dockerIcon from '../images/Docker.svg?raw';
+import githubActionsIcon from '../images/GitHub-Actions.svg?raw';
+import typescriptIcon from '../images/TypeScript.svg?raw';
+import javascriptIcon from '../images/JavaScript.svg?raw';
+import html5Icon from '../images/HTML5.svg?raw';
+import css3Icon from '../images/CSS3.svg?raw';
 
 export const navItems = ['Home', 'About', 'Work', 'Thoughts', 'Tech Stack', 'Contact'];
 
@@ -69,16 +81,18 @@ export const thoughts = [
 ];
 
 export const techStack = [
-  { icon: '🟣', name: '.NET' },
-  { icon: '⚛️', name: 'React' },
-  { icon: '🦋', name: 'Flutter' },
-  { icon: '🗄️', name: 'SQL Server' },
-  { icon: '☁️', name: 'Azure' },
-  { icon: '🐳', name: 'Docker' },
-  { icon: '⚙️', name: 'GitHub Actions' },
-  { icon: '🟦', name: 'TypeScript' },
-  { icon: '🟨', name: 'JavaScript' },
-  { icon: '</>', name: 'HTML/CSS' },
+  { icon: dotnetIcon, name: '.NET' },
+  { icon: reactIcon, name: 'React' },
+  { icon: flutterIcon, name: 'Flutter' },
+  { icon: sqlserverIcon, name: 'SQL Developer' },
+  { icon: azureIcon, name: 'Azure' },
+  { icon: azureDevOpsIcon, name: 'Azure DevOps' },
+  { icon: dockerIcon, name: 'Docker' },
+  { icon: githubActionsIcon, name: 'GitHub Actions' },
+  { icon: typescriptIcon, name: 'TypeScript' },
+  { icon: javascriptIcon, name: 'JavaScript' },
+  { icon: html5Icon, name: 'HTML5' },
+  { icon: css3Icon, name: 'CSS3' },
 ];
 
 export const socialLinks = [
