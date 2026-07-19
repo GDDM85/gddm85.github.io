@@ -42,20 +42,40 @@ export const whatIDoItems = [
 export const featuredWork = [
   {
     label: 'Engineering',
-    title: 'Platform Architecture',
-    description: 'Designing robust platforms that support complex workflows and reliable operations.',
+    title: 'Enterprise Platform Architecture',
+    description: 'Introduced formal software development practices into a large enterprise, backed by hands-on infrastructure and architecture work.',
+    details: [
+      'Introduced structured software development practices into a large enterprise, working alongside the existing infrastructure team.',
+      'Designed and configured virtual infrastructure (vPCI) and led architecture of server/application topology — DMZs, load balancers, server layouts, specs, traffic flow and certificates.',
+      'Designed SQL Server sizing and high-availability configuration, including Always On Availability Groups (AOAG), for uptime.',
+      'Configured on-prem Azure DevOps build agents to support the wider delivery pipeline.',
+      'Prior background in infrastructure (AppV, VMware, virtualisation, server & networking) directly shaped these architecture decisions.',
+    ],
     href: '#',
   },
   {
     label: 'Mobile',
-    title: 'Mobile Transformation',
-    description: 'Leading a Flutter migration to improve performance, consistency, and user experience across devices.',
+    title: 'Mobile Release Engineering',
+    description: 'Built a fully automated Flutter release pipeline, from on-prem macOS build agents through to signed, tested builds.',
+    details: [
+      'Migrated the mobile pipeline from classic to YAML-based Azure DevOps pipelines.',
+      'Installed and configured on-prem Azure DevOps build agents on Mac Minis to build and sign iOS .ipa files.',
+      'Pipeline runs full flutter test and flutter integration test suites before packaging.',
+      'Signed .ipa artifacts are handed off to a Windows build server for storage alongside other release artifacts.',
+      'Built a dedicated release-notes pipeline that collects commits and linked work items between branches and outputs a formatted Markdown release note automatically.',
+    ],
     href: '#',
   },
   {
     label: 'DevOps',
-    title: 'CI/CD & DevOps Enablement',
-    description: 'Enabling teams with automated pipelines, infrastructure best practices, and deployment confidence.',
+    title: 'CI/CD & Pipeline Modernisation',
+    description: 'Took the delivery pipeline from Jenkins to fully YAML-based Azure DevOps, with secured, cross-platform build agents and automated releases.',
+    details: [
+      'Migrated pipelines from Jenkins to on-prem classic Azure DevOps pipelines, then modernised again to YAML.',
+      'Set up and secured on-prem build agents across Windows Server and macOS (for iOS/Android signing), including IPsec configuration.',
+      'Automated Android and iOS build/signing for Flutter apps as part of the wider pipeline.',
+      'Wrote PowerShell automation to run unit and integration tests, and to handle release/deploy upgrades for both database and API layers.',
+    ],
     href: '#',
   },
 ];

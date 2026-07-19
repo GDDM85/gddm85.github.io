@@ -51,7 +51,7 @@ const meta = {
       </div>
       <div class="flex flex-1 gap-4 flex-col">
         {featuredWork.map((item) => (
-          <Card label={item.label} title={item.title} description={item.description} href={item.href} linkLabel="View case study →" />
+          <Card label={item.label} title={item.title} description={item.description} details={item.details} linkLabel="View case study" />
         ))}
       </div>
     </Container>
