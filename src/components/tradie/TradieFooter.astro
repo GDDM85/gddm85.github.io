@@ -1,5 +1,5 @@
 ---
-import { business, navItems, footerServices, socialLinks } from '../../data/tradieData';
+import { business, navItems, footerServices, socialLinks, gasSafeLogo } from '../../data/tradieData';
 ---
 <footer class="bg-slate-950 py-14 text-slate-400">
   <div class="mx-auto grid max-w-6xl gap-10 px-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -56,7 +56,10 @@ import { business, navItems, footerServices, socialLinks } from '../../data/trad
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 h-4 w-4 flex-shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
         Herefordshire — Covering all surrounding areas
       </p>
-      <p class="pt-1 text-xs font-semibold uppercase tracking-wide text-amber-400">Gas Safe Registered</p>
+      <div class="mt-2 inline-flex items-center gap-2 rounded-md bg-white px-3 py-2">
+        <img src={gasSafeLogo} alt="Gas Safe Register logo" class="h-7 w-auto" />
+        <span class="text-xs font-semibold uppercase tracking-wide text-slate-900">Registered No. {business.gasSafeNumber}</span>
+      </div>
     </div>
   </div>
 

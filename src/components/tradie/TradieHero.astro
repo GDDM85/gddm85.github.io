@@ -1,5 +1,5 @@
 ---
-import { business, heroChecklist, heroImage } from '../../data/tradieData';
+import { business, heroChecklist, heroImage, gasSafeLogo } from '../../data/tradieData';
 import { imageExists } from '../../utils/checkImage';
 
 const hasHeroImage = imageExists(heroImage.path);
@@ -46,11 +46,11 @@ const hasHeroImage = imageExists(heroImage.path);
   </div>
 
   <div class="relative mx-6 mb-6 flex justify-end sm:mx-10 sm:mb-8">
-    <div class="inline-flex items-center gap-3 rounded-lg bg-amber-400 px-4 py-2 shadow-lg">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 flex-shrink-0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
+    <div class="inline-flex items-center gap-3 rounded-lg bg-white px-4 py-2 shadow-lg">
+      <img src={gasSafeLogo} alt="Gas Safe Register logo" class="h-9 w-auto flex-shrink-0" />
       <span class="leading-tight text-slate-900">
         <span class="block text-xs font-extrabold uppercase tracking-wide">Gas Safe Registered</span>
-        <span class="block text-[11px] font-medium">No. {business.gasSafeNumber}</span>
+        <span class="block text-[11px] font-medium text-slate-500">No. {business.gasSafeNumber}</span>
       </span>
     </div>
   </div>
