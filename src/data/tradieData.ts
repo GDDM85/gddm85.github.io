@@ -1,41 +1,45 @@
-// Example/demo content for a heating & plumbing business mock-up page.
+// Example/demo content for a heating, plumbing & renewables business mock-up page.
 // This is a fictional site built purely to demonstrate the kind of small-business
-// website that can be built for a tradesperson, based on a reference design the
-// business owner shared. The business name is a placeholder — swap it (and the
-// logo/images below) once the real trading name is confirmed. Phone/email use
-// placeholder-safe formats — update with real details before ever going live.
+// website that can be built for a tradesperson, styled around the "Wye Valley"
+// brand and logo the business owner supplied. Phone/email use placeholder-safe
+// formats — update with real details before ever going live.
 
 export const business = {
-  name: '[Business Name] Heating & Plumbing',
-  shortName: '[Business Name]',
-  logoPrimary: '[BUSINESS NAME]',
-  logoSecondaryFirst: 'HEATING',
-  logoSecondarySecond: 'PLUMBING',
-  eyebrow: 'Local. Reliable. Professional.',
-  tagline: 'Trusted Plumbing & Heating Services',
+  name: 'Wye Valley Plumbing, Heating & Renewables',
+  shortName: 'Wye Valley',
+  logoPrimary: 'WYE VALLEY',
+  logoTagline: 'Plumbing, Heating & Renewables',
+  eyebrow: 'Local. Reliable. Sustainable.',
+  tagline: 'Trusted Plumbing, Heating & Renewables Specialists',
   intro:
-    'Providing high quality plumbing and heating solutions across Herefordshire and surrounding areas.',
-  areaSummary: 'Herefordshire & surrounding areas',
-  areas: ['Hereford', 'Hay-on-Wye', 'Ross-on-Wye', 'Leominster', 'Ledbury'],
+    'From boiler repairs to heat pumps and solar PV, providing high quality plumbing, heating and renewable energy solutions across the Wye Valley and surrounding areas.',
+  areaSummary: 'the Wye Valley, Herefordshire & Monmouthshire',
+  areas: ['Hereford', 'Hay-on-Wye', 'Ross-on-Wye', 'Monmouth', 'Leominster', 'Ledbury'],
   phone: '07970 123456',
   phoneHref: 'tel:+4407970123456',
-  email: 'info@yourbusiness.example',
+  email: 'info@wyevalleyplumbing.example',
   gasSafeNumber: '123456 (example)',
 };
 
+export const logoIcon = '/images/examples/heating-plumbing-template/wye-valley-icon.png';
+export const logoImage = '/images/examples/heating-plumbing-template/wye-valley-logo.jpg';
 export const gasSafeLogo = '/images/examples/heating-plumbing-template/gas-safe-logo.png';
-
 
 export const navItems = ['Home', 'Services', 'Projects', 'Reviews', 'About', 'Areas Covered', 'Contact'];
 
-export const heroChecklist = ['Gas Safe Registered', '5 Star Rated', 'Fully Insured', 'Competitive Prices'];
+export const heroChecklist = ['Gas Safe Registered', 'MCS Renewables Installer', 'Fully Insured', 'Competitive Prices'];
 
 export const trustStrip = [
   {
     title: 'Gas Safe Registered',
-    description: 'All work is carried out by a fully qualified and Gas Safe registered engineer.',
+    description: 'All gas work is carried out by a fully qualified and Gas Safe registered engineer.',
     icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>',
     logo: '/images/examples/heating-plumbing-template/gas-safe-logo.png',
+  },
+  {
+    title: 'MCS Certified Renewables',
+    description: 'Approved installer of air source heat pumps and solar PV under the MCS scheme.',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>',
   },
   {
     title: 'Reliable & Punctual',
@@ -46,11 +50,6 @@ export const trustStrip = [
     title: '5 Star Service',
     description: 'Our customers rate us 5 stars for quality, reliability and professionalism.',
     icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>',
-  },
-  {
-    title: 'Local & Trusted',
-    description: 'Based in Herefordshire, serving homes and businesses across the local area.',
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>',
   },
 ];
 
@@ -73,7 +72,22 @@ export const services = [
   {
     title: 'Central Heating',
     description: 'Installation, upgrades and repairs to central heating systems.',
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"></path><path d="M12 18v4"></path><path d="M4.93 4.93l2.83 2.83"></path><path d="M16.24 16.24l2.83 2.83"></path><path d="M2 12h4"></path><path d="M18 12h4"></path><path d="M4.93 19.07l2.83-2.83"></path><path d="M16.24 7.76l2.83-2.83"></path></svg>',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="1"></rect><path d="M7 6v12"></path><path d="M11 6v12"></path><path d="M15 6v12"></path></svg>',
+  },
+  {
+    title: 'Air Source Heat Pumps',
+    description: 'Supply and installation of efficient, low-carbon air source heat pumps.',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2"></path><path d="M12.59 19.41A2 2 0 1 0 14 16H2"></path><path d="M17.73 7.73A2.5 2.5 0 1 1 19.5 12H2"></path></svg>',
+  },
+  {
+    title: 'Solar PV Panels',
+    description: 'Solar panel design and installation to help cut energy bills sustainably.',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>',
+  },
+  {
+    title: 'EV Charging Points',
+    description: 'Home EV charge point supply and installation for electric vehicles.',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg>',
   },
   {
     title: 'Bathrooms',
@@ -91,15 +105,16 @@ export const footerServices = [...services.map((s) => s.title), 'Landlord Certif
 
 export const aboutHighlights = [
   'Boiler installations, servicing & repairs',
+  'Air source heat pumps & solar PV installations',
   'Central heating systems & power flushing',
   'Bathrooms & general plumbing',
   'Landlord certificates & safety checks',
 ];
 
 export const aboutCallout = {
-  title: 'Need a new boiler?',
-  description: 'Get a high efficiency, reliable boiler installed by a trusted local expert.',
-  linkLabel: 'View Boiler Installations',
+  title: 'Thinking about renewables?',
+  description: 'Get a free consultation on air source heat pumps, solar PV and other renewable upgrades.',
+  linkLabel: 'View Renewables Services',
 };
 
 export const testimonials = [
@@ -109,7 +124,7 @@ export const testimonials = [
     location: 'Hereford',
   },
   {
-    quote: 'Reliable, friendly and excellent workmanship. Our heating has never worked better!',
+    quote: 'Switched to an air source heat pump and the whole process was explained clearly from start to finish. Our bills have dropped and the house is warmer than ever.',
     author: 'Mark T',
     location: 'Ross-on-Wye',
   },
@@ -124,7 +139,7 @@ export const reviewSummary = '5.0 average rating from 47 customer reviews';
 
 export const galleryItems = [
   { path: '/images/examples/heating-plumbing-template/gallery-1.jpg', alt: 'Recent boiler installation' },
-  { path: '/images/examples/heating-plumbing-template/gallery-2.jpg', alt: 'Central heating system upgrade' },
+  { path: '/images/examples/heating-plumbing-template/gallery-2.jpg', alt: 'Air source heat pump installation' },
   { path: '/images/examples/heating-plumbing-template/gallery-3.jpg', alt: 'Bathroom plumbing installation' },
 ];
 

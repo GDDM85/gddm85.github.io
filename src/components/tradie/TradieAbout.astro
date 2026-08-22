@@ -8,22 +8,22 @@ const hasAboutImage = imageExists(aboutImage.path);
   <div class="mx-auto max-w-6xl px-6">
     <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
       <div class="space-y-6">
-        <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-500">About Us</p>
-        <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Your Local Plumbing &amp; Heating Engineer</h2>
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-leaf-600">About Us</p>
+        <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Your Local Plumbing, Heating &amp; Renewables Engineer</h2>
         <p class="leading-8 text-slate-600">
-          With years of experience in the plumbing and heating industry, I take pride in delivering reliable, honest and high quality workmanship on every job.
+          With years of experience in the plumbing, heating and renewables industry, I take pride in delivering reliable, honest and high quality workmanship on every job.
         </p>
         <ul class="space-y-3">
           {aboutHighlights.map((point) => (
             <li class="flex items-start gap-3 text-slate-700">
-              <span class="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-blue-500/10 text-blue-500">
+              <span class="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-flame-500/10 text-flame-600">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3"><polyline points="20 6 9 17 4 12"></polyline></svg>
               </span>
               <span>{point}</span>
             </li>
           ))}
         </ul>
-        <a href="#contact" class="inline-flex items-center justify-center rounded-md border border-blue-500 px-6 py-3 text-sm font-semibold text-blue-600 hover:bg-blue-50">
+        <a href="#contact" class="inline-flex items-center justify-center rounded-md border border-leaf-600 px-6 py-3 text-sm font-semibold text-leaf-700 hover:bg-leaf-50">
           Learn More About Me
         </a>
       </div>
@@ -39,10 +39,10 @@ const hasAboutImage = imageExists(aboutImage.path);
           </div>
         )}
 
-        <div class="absolute -bottom-6 -right-4 max-w-xs rounded-xl bg-slate-900 p-5 shadow-2xl sm:right-4">
+        <div class="absolute -bottom-6 -right-4 max-w-xs rounded-xl bg-navy-900 p-5 shadow-2xl sm:right-4">
           <p class="text-sm font-bold text-white">{aboutCallout.title}</p>
           <p class="mt-1 text-xs leading-5 text-slate-300">{aboutCallout.description}</p>
-          <a href="#services" class="mt-3 inline-block text-xs font-semibold uppercase tracking-wide text-blue-400 hover:text-blue-300">
+          <a href="#services" class="mt-3 inline-block text-xs font-semibold uppercase tracking-wide text-leaf-400 hover:text-leaf-300">
             {aboutCallout.linkLabel} →
           </a>
         </div>
