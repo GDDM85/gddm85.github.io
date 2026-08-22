@@ -7,7 +7,6 @@ build/
 .env
 .vercel/
 .parcel-cache/
-public/
 /.idea/
 /.vscode/
 npm-debug.log*
