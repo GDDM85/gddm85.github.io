@@ -129,7 +129,7 @@ export const galleryItems = [
 ];
 
 export const heroImage = { path: '/images/examples/heating-plumbing-template/hero.jpg', alt: `${business.name} — bathroom installation` };
-export const aboutImage = { path: '/images/examples/heating-plumbing-template/about.jpg', alt: `Boiler installation by ${business.shortName}` };
+export const aboutImage = { path: '/images/examples/heating-plumbing-template/about.png', alt: `Before and after boiler installation by ${business.shortName}` };
 
 export const socialLinks = [
   {
