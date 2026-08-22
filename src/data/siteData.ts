@@ -14,7 +14,7 @@ import html5Icon from '../images/HTML5.svg?raw';
 import css3Icon from '../images/CSS3.svg?raw';
 import powershellIcon from '../images/Powershell.svg?raw';
 
-export const navItems = ['Home', 'About', 'Work', 'Thoughts', 'Tech Stack', 'Contact'];
+export const navItems = ['Home', 'About', 'Work', 'Thoughts', 'Examples', 'Tech Stack', 'Contact'];
 
 export const whatIDoItems = [
   {
@@ -98,6 +98,16 @@ export const thoughts = [
     title: 'Scaling delivery with confidence',
     summary: 'Key practices for maintaining focus and quality as teams grow and systems become more complex.',
     href: '#',
+  },
+];
+
+export const exampleProjects = [
+  {
+    label: 'Work in Progress',
+    title: 'Heating & Plumbing Trade Website',
+    description: 'An example small-business site built for a local heating & plumbing trader — currently in early preview while final branding is confirmed.',
+    href: '/examples/heating-plumbing-template/',
+    linkLabel: 'View example site →',
   },
 ];
 

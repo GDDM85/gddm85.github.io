@@ -1,5 +1,5 @@
 ---
-const { label = '', title = '', description = '', href = '', linkLabel = '', icon = '', details = [] } = Astro.props;
+const { label = '', title = '', description = '', href = '', linkLabel = '', icon = '', details = [], external = false } = Astro.props;
 ---
 <div class="rounded-md border border-white/10 bg-slate-900/80 p-6 shadow-soft transition-colors duration-200 hover:border-cyan-400/20 hover:bg-slate-900/95">
   {icon && <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-200 text-lg">{icon}</div>}
@@ -18,7 +18,7 @@ const { label = '', title = '', description = '', href = '', linkLabel = '', ico
     </details>
   ) : (
     href && linkLabel && (
-      <a href={href} class="mt-6 inline-flex text-sm font-semibold text-cyan-300 hover:text-cyan-100">{linkLabel}</a>
+      <a href={href} target={external ? '_blank' : undefined} rel={external ? 'noreferrer' : undefined} class="mt-6 inline-flex text-sm font-semibold text-cyan-300 hover:text-cyan-100">{linkLabel}</a>
     )
   )}
 </div>
