@@ -1,15 +1,16 @@
-// Example/demo content for the "Scott Birch Plumbing & Heating" mock-up page.
+// Example/demo content for a heating & plumbing business mock-up page.
 // This is a fictional site built purely to demonstrate the kind of small-business
 // website that can be built for a tradesperson, based on a reference design the
-// business owner shared. Phone/email use placeholder-safe formats — update with
-// real details before ever going live.
+// business owner shared. The business name is a placeholder — swap it (and the
+// logo/images below) once the real trading name is confirmed. Phone/email use
+// placeholder-safe formats — update with real details before ever going live.
 
 export const business = {
-  name: 'Scott Birch Plumbing & Heating',
-  shortName: 'Scott Birch',
-  logoPrimary: 'SCOTT BIRCH',
-  logoSecondaryFirst: 'PLUMBING',
-  logoSecondarySecond: 'HEATING',
+  name: '[Business Name] Heating & Plumbing',
+  shortName: '[Business Name]',
+  logoPrimary: '[BUSINESS NAME]',
+  logoSecondaryFirst: 'HEATING',
+  logoSecondarySecond: 'PLUMBING',
   eyebrow: 'Local. Reliable. Professional.',
   tagline: 'Trusted Plumbing & Heating Services',
   intro:
@@ -18,11 +19,12 @@ export const business = {
   areas: ['Hereford', 'Hay-on-Wye', 'Ross-on-Wye', 'Leominster', 'Ledbury'],
   phone: '07970 123456',
   phoneHref: 'tel:+4407970123456',
-  email: 'info@scottbirchplumbing.example',
+  email: 'info@yourbusiness.example',
   gasSafeNumber: '123456 (example)',
 };
 
-export const gasSafeLogo = '/images/examples/scott-birch/gas-safe-logo.png';
+export const gasSafeLogo = '/images/examples/heating-plumbing-template/gas-safe-logo.png';
+
 
 export const navItems = ['Home', 'Services', 'Projects', 'Reviews', 'About', 'Areas Covered', 'Contact'];
 
@@ -33,7 +35,7 @@ export const trustStrip = [
     title: 'Gas Safe Registered',
     description: 'All work is carried out by a fully qualified and Gas Safe registered engineer.',
     icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>',
-    logo: '/images/examples/scott-birch/gas-safe-logo.png',
+    logo: '/images/examples/heating-plumbing-template/gas-safe-logo.png',
   },
   {
     title: 'Reliable & Punctual',
@@ -102,7 +104,7 @@ export const aboutCallout = {
 
 export const testimonials = [
   {
-    quote: 'Scott installed our new boiler and did a fantastic job. Professional, tidy and great communication throughout. Highly recommend.',
+    quote: 'They installed our new boiler and did a fantastic job. Professional, tidy and great communication throughout. Highly recommend.',
     author: 'Emily R',
     location: 'Hereford',
   },
@@ -112,7 +114,7 @@ export const testimonials = [
     location: 'Ross-on-Wye',
   },
   {
-    quote: 'Scott fitted our bathroom from start to finish. The attention to detail is second to none.',
+    quote: 'They fitted our bathroom from start to finish. The attention to detail is second to none.',
     author: 'Sarah J',
     location: 'Ledbury',
   },
@@ -121,13 +123,13 @@ export const testimonials = [
 export const reviewSummary = '5.0 average rating from 47 customer reviews';
 
 export const galleryItems = [
-  { path: '/images/examples/scott-birch/gallery-1.jpg', alt: 'Recent boiler installation' },
-  { path: '/images/examples/scott-birch/gallery-2.jpg', alt: 'Central heating system upgrade' },
-  { path: '/images/examples/scott-birch/gallery-3.jpg', alt: 'Bathroom plumbing installation' },
+  { path: '/images/examples/heating-plumbing-template/gallery-1.jpg', alt: 'Recent boiler installation' },
+  { path: '/images/examples/heating-plumbing-template/gallery-2.jpg', alt: 'Central heating system upgrade' },
+  { path: '/images/examples/heating-plumbing-template/gallery-3.jpg', alt: 'Bathroom plumbing installation' },
 ];
 
-export const heroImage = { path: '/images/examples/scott-birch/hero.jpg', alt: `${business.name} — bathroom installation` };
-export const aboutImage = { path: '/images/examples/scott-birch/about.jpg', alt: `Boiler installation by ${business.shortName}` };
+export const heroImage = { path: '/images/examples/heating-plumbing-template/hero.jpg', alt: `${business.name} — bathroom installation` };
+export const aboutImage = { path: '/images/examples/heating-plumbing-template/about.jpg', alt: `Boiler installation by ${business.shortName}` };
 
 export const socialLinks = [
   {
