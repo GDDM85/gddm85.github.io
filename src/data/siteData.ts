@@ -105,8 +105,8 @@ export const exampleProjects = [
   {
     label: 'Work in Progress',
     title: 'Heating & Plumbing Trade Website',
-    description: 'An example small-business site built for a local heating & plumbing trader — currently in early preview while final branding is confirmed.',
-    href: '/examples/heating-plumbing-template/',
+    description: 'A small-business site built for a local heating & plumbing trader — currently in early preview while final branding is confirmed.',
+    href: 'https://wyevalleyheating.co.uk',
     linkLabel: 'View example site →',
   },
 ];
